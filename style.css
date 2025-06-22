@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cambo&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --purple50: hsl(260, 100%, 95%);
+    --purple300: hsl(264, 82%, 80%);
+    --purple500: hsl(263, 55%, 52%);
+    --white: hsl(0, 0%, 100%);
+    --grey100: hsl(214, 17%, 92%);
+    --grey200: hsl(0, 0%, 81%);
+    --grey400: hsl(224, 10%, 45%);
+    --grey500: hsl(217, 19%, 35%);
+    --darkblue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    font-size: 13px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Barlow Semi Condensed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--grey100);
+    gap: 3rem;
+}
+
+.purple {
+    background-color: var(--purple500);
+    color: var(--white);
+}
+.grey {
+    background-color: var(--grey500);
+    color: var(--white);
+}
+.white {
+    background-color: var(--white);
+    color: var(--grey500);
+}
+.darkblue {
+    background-color: var(--darkblue);
+    color: var(--grey200);
+}
+.purple figure {
+    outline: 1px solid white;
+}
+.darkblue figure {
+    outline: 2px solid var(--purple500);
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 0.8rem;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+.details {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.details img {
+    height: 40px;
+    border-radius: 50%;
+    align-self: center;
+}
+.details span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.details figure {
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+    border-radius: 50%;
+}
+.details span * {
+    margin: 2px 0;
+}
+.name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.heading {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+.desc {
+    margin-top: 1.8em;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 6rem;
+        
+    }
+    .testimonials {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr min-content;
+        max-width: 85%;
+    }
+    .testimonial {
+        max-width: fit-content;
+        font-size: 1.2rem;
+    }
+    .purple {
+        grid-column: 1 / 3;
+    }
+    .kira {
+        grid-row: 1 / 3;
+    }
+    .jeanette, .darkblue {
+        grid-row: 2 / 3;
+    }
+    .darkblue {
+        grid-column: 2 / 4;
+    }
+}
