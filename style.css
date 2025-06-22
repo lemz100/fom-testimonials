@@ -125,7 +125,6 @@ body {
     }
     .testimonial {
         max-width: fit-content;
-        font-size: 1.2rem;
     }
     .purple {
         grid-column: 1 / 3;
